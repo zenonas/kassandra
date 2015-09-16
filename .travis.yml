@@ -1,4 +1,18 @@
 language: ruby
+branches:
+  only:
+    - master
+    - /^v[0-9]+\.[0-9]+\.[0-9]+/
+env:
+  global:
+    - CODECLIMATE_REPO_TOKEN=b630f222b36682f23425a5ae1f500e181f1bdea4ec3129b42ec96af4ea2e19fd
 rvm:
-  - 2.2.2
+  - 2.2.3
+  - jruby-9.0.1.0
+  - 2.1.7
+  - 2.0.0-p647
+services:
+  - cassandra
+script:
+  - bundle exec rake
 before_install: gem install bundler -v 1.10.6
