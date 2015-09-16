@@ -9,24 +9,26 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Zen Kyprianou"]
   spec.email         = ["zen@kyprianou.eu"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Simple Cassandra ORM targetting CQL3}
+  spec.description   = %q{Kassandra aims to provide a friendly simple ORM to interface with Cassandra. Under the hood it uses the Datastax Ruby Driver for Apache Cassandra}
+  spec.homepage      = "https://github.com/zenonas/kassandra"
+  spec.license       = 'MIT'
 
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
+  spec.required_ruby_version = '~> 2.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.10"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
+  spec.add_runtime_dependency 'cassandra-driver', '~> 2.1.4'
+
+  spec.add_development_dependency 'rake-n-bake'
+  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'codeclimate-test-reporter'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'semver2'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'simplecov'
 end

@@ -1,6 +1,14 @@
 require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+require 'rake/clean'
+require 'rake_n_bake'
+require 'rubocop/rake_task'
 
-RSpec::Core::RakeTask.new(:spec)
+RuboCop::RakeTask.new
 
-task :default => :spec
+task default: [
+  :clean,
+  :"bake:code_quality:all",
+  :"bake:rspec",
+  :"bake:coverage:check_specs",
+  :"bake:ok"
+]
