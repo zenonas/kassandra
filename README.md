@@ -1,8 +1,10 @@
 # Kassandra
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kassandra`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/kassandra.svg)](http://badge.fury.io/rb/kassandra) [![Build Status](https://travis-ci.org/zenonas/kassandra.svg?branch=master)](https://travis-ci.org/zenonas/kassandra) [![Coverage Status](https://img.shields.io/coveralls/zenonas/kassandra.svg)](https://coveralls.io/r/zenonas/kassandra?branch=master) [![Code Climate](https://codeclimate.com/github/zenonas/kassandra/badges/gpa.svg)](https://codeclimate.com/github/zenonas/kassandra) [![Dependency Status](https://gemnasium.com/zenonas/kassandra.svg)](https://gemnasium.com/zenonas/kassandra) [![Inline docs](http://inch-ci.org/github/zenonas/kassandra.svg?branch=master)](http://inch-ci.org/github/zenonas/kassandra)
 
-TODO: Delete this and the text above, and describe your gem
+Kassandra aims to be a simple ORM for Cassandra. The goal is to provide basic ORM CRUD operations and querying while providing a nice DSL for more specialized CQL queries.
+
+**NOTE!!** This gem is in the very early stages of development and will constantly have breaking API changes before v1.0. **Do not use in production**
 
 ## Installation
 
@@ -22,15 +24,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+Kassandra.pending...
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/kassandra.
+1. Fork it ( https://github.com/zenonas/kassandra/fork )
+2. Install Cassandra locally( http://cassandra.apache.org/ )
+3. Install ruby dependencies using (`bundle install`)
+4. Create your feature branch (`git checkout -b my-new-feature`)
+5. Commit your changes with any relevant specs(`git commit -am 'Add some feature'`)
+6. Run your tests with (`rake`)
+7. Push to the branch (`git push origin my-new-feature`)
+8. Create a new Pull Request
 
